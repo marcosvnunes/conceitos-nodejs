@@ -49,7 +49,6 @@ app.delete("/repositories/:id", (request, response) => {
   if(repository < 0){
     return response.status(400).send();
   }
-
   repositories.splice(repository,1);
   
   return response.status(204).send();
